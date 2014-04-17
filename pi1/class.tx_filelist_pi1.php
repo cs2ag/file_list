@@ -156,7 +156,7 @@ class tx_filelist_pi1 extends tslib_pibase {
 				$markers['###ICON###'] .= '<img src="' . $this->settings['iconsPathFolders'] . 'folder.png" alt="' . $directories[$i]['name'] . '" border ="0" />';
 			}
 			$markers['###ICON###'] .= '</a>';
-			$markers['###FILENAME###'] = $directories[$i]['name'];
+			$markers['###FILENAME###'] = $this->cObj->stdWrap($directories[$i]['name'], $this->settings['directory_name.']);
 			$markers['###PATH###'] = substr($directories[$i]['path'], strlen($this->settings['path']));
 			$markers['###NEWFILE###'] = '';
 			$markers['###INFO###'] = '';
@@ -213,7 +213,7 @@ class tx_filelist_pi1 extends tslib_pibase {
 		for ($i = 0; $i < count($files); $i++) {
 			$markers = array();
 			$markers['###ICON###'] = $this->cObj->typolink('<img src="' . $this->settings['iconsPathFiles'] . $this->getFileTypeIcon($files[$i]['name']) . '" alt="' . $files[$i]['name'] . '">', array('parameter' => tx_filelist_helper::generateProperURL($files[$i]['path'])));
-			$markers['###FILENAME###'] = $files[$i]['name'];
+			$markers['###FILENAME###'] = $this->cObj->stdWrap($files[$i]['name'], $this->settings['file_name.']);
 			$markers['###PATH###'] = $files[$i]['path'];
 			$markers['###NEWFILE###'] = ($this->settings['new_duration'] > 0) ? $this->getNewFileText($files[$i]['path'], $this->settings['new_duration']) : '';
 			$markers['###INFO###'] = $this->getHRFileSize($files[$i]['path']);
