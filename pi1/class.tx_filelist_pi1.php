@@ -226,7 +226,7 @@ class tx_filelist_pi1 extends tslib_pibase {
 					$markers = $_procObj->extraItemMarkerProcessor($markers, $files[$i], $this);
 				}
 			}
-			$wrappedSubpartArray['###LINK_FILE###'] = $this->cObj->typolinkWrap(array('parameter' => tx_filelist_helper::generateProperURL($files[$i]['path'])));
+			$wrappedSubpartArray['###LINK_FILE###'] = $this->cObj->typolinkWrap(array('parameter' => tx_filelist_helper::generateProperURL($files[$i]['path']), 'fileTarget' => '_blank'));
 
 			$row = $this->cObj->substituteMarkerArrayCached(
 				$odd ? $this->templates['odd'] : $this->templates['even'],
