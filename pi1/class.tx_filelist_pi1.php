@@ -212,7 +212,7 @@ class tx_filelist_pi1 extends tslib_pibase {
 		$rows = array();
 		for ($i = 0; $i < count($files); $i++) {
 			$markers = array();
-			$markers['###ICON###'] = $this->cObj->typolink('<img src="' . $this->settings['iconsPathFiles'] . $this->getFileTypeIcon($files[$i]['name']) . '" alt="' . $files[$i]['name'] . '">', array('parameter' => tx_filelist_helper::generateProperURL($files[$i]['path'])));
+			$markers['###ICON###'] = $this->cObj->typolink('<img src="' . $this->settings['iconsPathFiles'] . 'blank_document.png' . '" alt="' . $files[$i]['name'] . '">', array('parameter' => tx_filelist_helper::generateProperURL($files[$i]['path'])));
 			$markers['###FILENAME###'] = $this->cObj->stdWrap($files[$i]['name'], $this->settings['file_name.']);
 			$markers['###PATH###'] = $files[$i]['path'];
 			$markers['###NEWFILE###'] = ($this->settings['new_duration'] > 0) ? $this->getNewFileText($files[$i]['path'], $this->settings['new_duration']) : '';
