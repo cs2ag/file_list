@@ -22,8 +22,8 @@
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-require_once(PATH_tslib . 'class.tslib_pibase.php');
-require_once('t3lib/class.t3lib_befunc.php');
+//require_once(PATH_tslib . 'class.tslib_pibase.php');
+//require_once('t3lib/class.t3lib_befunc.php');
 require_once(t3lib_extMgm::extPath('file_list') . '/pi1/class.tx_filelist_helper.php');
 
 /**
