@@ -22,7 +22,7 @@
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-require_once(PATH_t3lib . 'class.t3lib_scbase.php');
+//require_once(PATH_t3lib . 'class.t3lib_scbase.php');
 
 /**
  * Update class for the 'file_list' extension.
